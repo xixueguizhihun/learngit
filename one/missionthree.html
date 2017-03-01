@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #container{
+            padding: 20px;
+            background-color: #eee;
+            border: 1px solid #999;
+
+        }
+        /*伪元素清除浮动*/
+        #container::after {
+            content:"123";
+            display:block;
+            clear:both;
+        }
+        #left
+        {
+            float: left;
+            width: 220px;
+            height: 500px;
+            background: blue;
+        }
+
+        #right{
+            float: right;
+            height: 400px;
+            width: 220px;
+            background: blue;
+        }
+
+        #main {
+            margin: 0 230px;
+            background: red;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="left">left </div>
+    <div id="right">right</div>
+    <div id="main">mian</div>
+</div>
+</body>
+</html>

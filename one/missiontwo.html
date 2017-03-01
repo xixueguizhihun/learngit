@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*  */
+        .radios+label{
+            width:16px;
+            height: 16px;
+            border:2px solid #d9d9d9;
+            display: -webkit-flex;
+            display:flex;
+        }
+        .radios:checked+label{
+            border:1px solid #d73d32;
+            font-weight: 800;
+        }
+        .radios:checked+label::after{
+            margin: auto;
+            content: ' ';
+            color: red;
+            width:8px;
+            height:8px;
+            line-height: 8px;
+            text-align: center;
+            font-size: 12px;
+            background: #2aabd2;
+            border-radius: 50%;
+        }
+        /*.radios:checked+label::after{
+            border-radius: 50%;
+            width:8px;
+            height:8px;
+            line-height: 8px;
+            content: ' '; !*用于与伪元素配合，插入生成内容*!
+            background: #2aabd2;
+        }*/
+        input{
+            margin:0;
+            display: none;
+        }
+        .radio{
+            display: -webkit-flex;/*flex布局。*/
+            display: flex;
+            width: 50px;
+            -webkit-justify-content: space-between;
+            justify-content: space-between;/*两边留白弹性布局*/
+        }
+        .radios+label{  /*“+”兄弟选择器*/
+            border-radius: 50%;
+        }
+
+    </style>
+</head>
+<body>
+<div id='wrap'>
+    <h2>伪元素实现：</h2>
+    <div class="radio">
+        <input type="radio" name="sex"  id="radioBox" class="radios">
+        <label for="radioBox"></label>
+        <input type="radio" name="sex"  id="radioBox1" class="radios">
+        <label for="radioBox1"></label>
+    </div>
+</body>
+</html>
