@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        .container{
+
+
+            padding: 20px;
+            display: flex;
+            flex-flow: row wrap;
+            align-content: space-between;
+            align-items: center;
+        }
+        #one{
+            width: 120px;
+            height: 150px;
+            border: 1px solid red;
+            order: 1;
+        }
+        #two{
+            width: 120px;
+            height: 120px;
+            border: 1px solid red;
+            order: 2;
+        }
+        #three{
+            width: 120px;
+            height: 40px;
+            border: 1px solid red;
+            order: 3;
+        }
+        #four{
+            width: 120px;
+            height: 200px;
+            border: 1px solid red;
+            order: 4;
+        }
+        .item{
+            margin-left:5px;
+            margin-right: 5px;
+        }
+
+        @media screen and (max-width: 583px) {
+            .container{
+
+
+                padding: 20px;
+                display: flex;
+                flex-flow: row wrap;
+                align-content: space-between;
+                align-items: center;
+            }
+            #one{
+                width: 120px;
+                height: 150px;
+                border: 1px solid red;
+                order: 2;
+            }
+            #two{
+                width: 120px;
+                height: 120px;
+                border: 1px solid red;
+                order: 3;
+            }
+            #three{
+                width: 120px;
+                height: 40px;
+                border: 1px solid red;
+                order: 4;
+            }
+            #four{
+                width: 120px;
+                height: 200px;
+                border: 1px solid red;
+                order: 1;
+            }
+            .item{
+                margin-left:5px;
+                margin-right: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div id="one" class="item">one</div>
+    <div id="two" class="item">two</div>
+    <div id="three" class="item">three</div>
+    <div id="four" class="item">four</div>
+
+</div>
+
+</body>
+</html>
